@@ -3,9 +3,16 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
-
-    pass
+    newArray = []
+    for i in range(0, len(arr)):
+        copy = arr.copy()
+        copy[i] = 1
+        total = 1
+        
+        for value in copy:
+            total = total * value
+        newArray.append(total)
+    return newArray
 
 
 if __name__ == '__main__':
